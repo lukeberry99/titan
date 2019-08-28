@@ -14,3 +14,4 @@ nnoremap <leader>> :!<space>
 vnoremap <leader>cc "*y
 map <leader>vv "*p
 
+nnoremap <F5> "=strftime("%d/%m/%y %H:%M:%S")<CR>P

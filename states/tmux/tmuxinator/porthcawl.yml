@@ -1,0 +1,8 @@
+name: porthcawl
+root: ~/Projects/Wordpress/experience-porthcawl-site/
+
+windows:
+  - editor: v
+  - docker: docker-compose up
+  - console:
+      layout: main-horizontal

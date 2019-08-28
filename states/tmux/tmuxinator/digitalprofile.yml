@@ -1,0 +1,7 @@
+name: digitalprofile
+root: ~/Projects/Infrastructure/DigitalProfile
+
+windows:
+  - editor: v
+  - console:
+      layout: main-horizontal

@@ -1,4 +1,5 @@
-set -g default-terminal 'tmux-256color'
+# set -g default-terminal 'tmux-256color'
+set -g default-terminal 'xterm-256color'
 set -as terminal-overrides ',xterm*:Tc:sitm=\E[3m'
 set-option -g mouse on
 set-window-option -g automatic-rename off
@@ -32,8 +33,7 @@ bind L resize-pane -R 5
 
 set-option -g status-position bottom
 set-window-option -g xterm-keys on
-bind-key -n S-Up set-option -g status
-bind-key -n S-Down set-option -g status
+bind-key -n S-Up set-option -g status bind-key -n S-Down set-option -g status
 bind-key -n S-Left previous-window
 bind-key -n S-Right next-window
 bind-key Tab switch-client -l
@@ -49,10 +49,10 @@ set -g status-interval 3
 set -g @plugin 'chriszarate/tmux-tasks'
 
 set -g @tasks_manager 'taskwarrior'
-set -g @tasks_icon_urgent "\uf017 "
-set -g @tasks_icon_outstanding "\uf425 "
+set -g @tasks_icon_urgent " "
+set -g @tasks_icon_outstanding " "
 set -g @tasks_format_begin "#[fg=black,bg=yellow] #(task _get rc.context)"
-set -g @tasks_format_end "#[fg=yellow,bg=green]\ue0bc"
+set -g @tasks_format_end "#[fg=yellow,bg=green]"
 
 #---------------------------------------
 # Theme
@@ -64,9 +64,10 @@ set -g status-left-length 100
 set -g window-status-separator "" 
 
 # Bars ---------------------------------
-set -g status-left "#[fg=black,bg=cyan] \uf40b #S #[fg=cyan,bg=black]\ue0bc"
-set -g status-right "#[fg=brightcyan,bg=black]\ue0ba #[fg=black,bg=brightcyan] %Y-%m-%d \ue0bb  %l:%M #[fg=brightcyan,bg=yellow]\ue0bc #{tasks_status} #[fg=black,bg=green] #(whoami) "
+set -g status-left "#[fg=black,bg=cyan]  #S #[fg=cyan,bg=black]"
+set -g status-right "#[fg=brightcyan,bg=black] #[fg=black,bg=brightcyan] %Y-%m-%d   %l:%M #[fg=brightcyan,bg=yellow] #{tasks_status} #[fg=black,bg=green] #(whoami) "
 
+# set -g status-right "#[fg=brightcyan,bg=black] #[fg=brightcyan,bg=yellow] %Y-%m-%d   %l:%M #[fg=black,bg=green] #(whoami) "
 # Windows ------------------------------
 set -g status-justify centre
 set -g window-status-format "#[fg=white,bg=black] #W"

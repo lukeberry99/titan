@@ -1,0 +1,8 @@
+name: chat
+root: ~
+
+windows:
+  - irc:
+    - weechat
+    - /join ##aws
+    - /join #bash

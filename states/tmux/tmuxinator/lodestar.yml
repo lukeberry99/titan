@@ -1,0 +1,8 @@
+name: lodestar
+root: ~/Projects/javascript/lodestar
+
+windows:
+  - editor: v
+  - console:
+      layout: main-horizontal
+  - running: yarn serve

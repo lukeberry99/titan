@@ -1,7 +1,8 @@
-name: Titan
-root: ~/titan/
+name: titan
+root: ~/Projects/vim/titan
 
 windows:
-  - editor: v
+  - titan: v
+  - chunk: v ~/.chunkwmrc
   - console:
       layout: main-horizontal

@@ -10,6 +10,7 @@ let g:ctrlp_cmd = 'CtrlP'
 
 let g:NERDTreeHighlightFolders = 1
 let g:NERDTreeHighlightFoldersFullName = 1
+let NERDTreeShowHidden = 1
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1 " enable folder glyph flag
 let g:DevIconsEnableFoldersOpenClose = 1
 let g:DevIconsEnableFolderExtensionPatternMatching = 1

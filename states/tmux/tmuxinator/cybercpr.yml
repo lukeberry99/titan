@@ -1,0 +1,8 @@
+name: cybercpr
+root: ~/Projects/javascript/cybercpr-forms
+
+windows:
+  - editor: v
+  - console:
+      layout: main-horizontal
+  - running: yarn serve

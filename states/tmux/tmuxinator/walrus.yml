@@ -1,0 +1,8 @@
+name: walrus
+root: ~/Projects/laravel/walrus
+
+windows:
+  - editor: v
+  - console:
+      layout: main-horizontal
+  - docker: bash vessel start
