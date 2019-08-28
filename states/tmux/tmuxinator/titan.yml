@@ -1,5 +1,5 @@
 name: Titan
-root: ~/titan/
+root: ~/projects/vim/titan
 
 windows:
   - editor: v
