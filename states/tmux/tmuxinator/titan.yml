@@ -2,6 +2,7 @@ name: Titan
 root: ~/projects/vim/titan
 
 windows:
-  - editor: v
+  - titan: v
+  - chunk: v ~/.chunkwmrc
   - console:
       layout: main-horizontal

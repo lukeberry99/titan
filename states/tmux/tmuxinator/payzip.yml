@@ -1,0 +1,8 @@
+name: payzip
+root: ~/Projects/C#/payzip/PayZip
+
+windows:
+  - editor: v
+  - console: 
+      layout: main-horizontal
+

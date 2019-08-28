@@ -4,7 +4,7 @@
 # environment variables. Some entries may override variables
 # set by alacritty itself.
 env:
-  TERM: xterm-256color-italic
+  TERM: xterm-256color
 #
 # This value is used to set the `$TERM` environment variable for
 # each instance of Alacritty. If it is not present, alacritty will
@@ -20,14 +20,12 @@ window:
   dimensions:
     columns: 200
     lines: 100 
-
-  # Window padding (changes require restart)
-  #
+  # Window padding (changes require restart) 
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 4
-    y: 4 
+    x: 10
+    y: 10
 
   # Spread additional padding evenly around the terminal content.
   dynamic_padding: false
@@ -80,8 +78,9 @@ tabspaces: 8
 font:
   # Normal (roman) font face
   normal:
-     family: RobotoMono Nerd Font
-     style: Light
+     # family: RobotoMono Nerd Font
+     family: Knack Nerd Font
+     style: Regular
   # Default:
   #   - (macOS) Menlo
   #   - (Linux) monospace
@@ -93,8 +92,9 @@ font:
 
   #Bold font face
   bold:
-    family: RobotoMono Nerd Font
-    style: Regular
+    family: Knack Nerd Font
+    # family: RobotoMono Nerd Font
+    style: Bold
   
   # If the bold family is not specified, it will fall back to the
   # value specified for the normal font.

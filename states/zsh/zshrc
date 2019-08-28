@@ -7,11 +7,8 @@ ZSH_THEME="spaceship"
 
 SPACESHIP_DOCKER_SHOW=false
 SPACESHIP_KUBECONTEXT_SHOW=false
-SPACESHIP_CHAR_SYMBOL="λ "
-
-SPACESHIP_GIT_SYMBOL="\ue702 "
+SPACESHIP_CHAR_SYMBOL="λ " SPACESHIP_GIT_SYMBOL="\ue702 "
 SPACESHIP_GIT_BRANCH_COLOR="red"
-
 SPACESHIP_ELIXIR_SYMBOL="\ue62d "
 
 plugins=(
@@ -19,9 +16,7 @@ plugins=(
   docker
   tmuxinator
   mix
-)
-
-source $ZSH/oh-my-zsh.sh
+) source $ZSH/oh-my-zsh.sh
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -30,9 +25,23 @@ export NVM_DIR="$HOME/.nvm"
 autoload -U promptinit; promptinit
 prompt spaceship
 
+alias ref='source ~/.zshrc'
 
 alias v="nvim"
 alias aqua="Asciiquarium"
+
+# Tmux
+alias tn='tmux new -s'
+alias tk='tmux kill-session -t'
+alias tl='tmux ls'
+alias taa='tmux attach -t'
+alias tx='tmuxinator'
+alias txc='tmuxinator copy'
+
+# AWS
+alias aws-personal='export AWS_DEFAULT_PROFILE=personal'
+alias aws-digitalprofile='export AWS_DEFAULT_PROFILE=digitalprofile'
+alias aws-default='export AWS_DEFAULT_PROFILE=default'
 
 # Task warrior tooling
 alias ta="task"
@@ -41,19 +50,7 @@ alias taw="task context work"
 alias in='task add +in'
 alias d='delta'
 
-# Dotfiles utility functions
-# If simply titan is called go to titan directory
-# If called with apply then run ./bin/run.sh
-titan() {
-  if [ "$1" = "apply" ]; then
-    pwd=$(pwd)
-    cd ~/titan
-    sh ./bin/run.sh
-    cd "${pwd}"
-  else
-    tmuxinator start titan
-  fi
-}
+alias tw='timew'
 
 delta() {
   if [ "$1" = "launch" ]; then
@@ -71,14 +68,16 @@ notes() {
   tmuxinator start notes
 }
 
-# Tmux shenanigans
-dv-react() {
-  tmuxinator start dv-react
-}
+# chunkwm
+alias chunkr='brew services restart chunkwm'
+alias chunks='brew services start chunkwm'
+alias chunkst='brew services stop chunkwm'
 
-dv-node() {
-  tmuxinator start dv-node
-}
+# Docker
+alias drm='docker rm $(docker ps -aq) --force'
+
+# Git
+alias gs='git status'
 
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash

@@ -1,7 +1,7 @@
 [user]
-        name = Stephen Bolton
-        email = stephenkbolton@gmail.com
-        username = skbolton
+        name = Luke Berry
+        email = lukeberry99@gmail.com
+        username = lukeberry99
 
 [alias]
         l = log --date=short --decorate --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]"

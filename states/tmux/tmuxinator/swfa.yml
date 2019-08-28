@@ -1,0 +1,8 @@
+name: swfa
+root: ~/Projects/laravel/swfa
+
+windows:
+  - editor: v
+  - console:
+      layout: main-horizontal
+  - docker: bash vessel start

@@ -1,0 +1,14 @@
+name: projmanagement
+root: ~/Projects/ProjManagement
+
+windows:
+  - server: 
+      root: ~/Projects/ProjManagement/server
+      panes:
+        - v
+  - client: 
+      root: ~/Projects/ProjManagement/client
+      panes:
+        - v
+  - console: make dev
+
