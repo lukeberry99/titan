@@ -61,3 +61,7 @@ call minpac#add('heavenshell/vim-jsdoc')
 call minpac#add('elixir-editors/vim-elixir')
 call minpac#add('ryanoasis/vim-devicons')
 call minpac#add('posva/vim-vue')
+
+" Markdown
+call minpac#add('godlygeek/tabular')
+call minpac#add('plasticboy/vim-markdown')
